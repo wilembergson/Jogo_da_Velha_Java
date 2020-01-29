@@ -10,9 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class MainTela extends JFrame implements ActionListener{
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private JButton b1 = new JButton();
 	private JButton b2 = new JButton();
@@ -27,9 +25,7 @@ public class MainTela extends JFrame implements ActionListener{
 	private int cont = 0;
 	private String [][] tab = new String[3][3];
 	
-	
-	public void actionPerformed(ActionEvent e) {
-		
+	public void actionPerformed(ActionEvent e) {	
 		String vez;
 		if(cont%2==0) {
 			vez="X";
@@ -95,7 +91,6 @@ public class MainTela extends JFrame implements ActionListener{
 		}
 		
 		String[] PO = new String[8];
-		
 		
 		PO[0] = tab[0][0] + tab[0][1] + tab[0][2];
 		PO[1] = tab[1][0] + tab[1][1] + tab[1][2];
@@ -164,8 +159,8 @@ public class MainTela extends JFrame implements ActionListener{
 						tab[x][y]=null;
 					}
 				}
-				
 			}
+			
 			if(PO[i].equals("OOO")){
 				JOptionPane.showMessageDialog(null, "JOGADOR (O) VENCEU!");
 				cont=0;
@@ -195,8 +190,7 @@ public class MainTela extends JFrame implements ActionListener{
 					}
 				}
 			}
-		}
-		
+		}	
 	}
 	
 	public MainTela() {
@@ -238,10 +232,8 @@ public class MainTela extends JFrame implements ActionListener{
 	}
 	
 	
-	
 	public static void main(String[] args) {
 		
 		new MainTela();
 	}
-	
 }
